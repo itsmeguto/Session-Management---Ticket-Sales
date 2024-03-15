@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Test Ticket Sales{% endblock %}
+
+{% block content %}
+    <h2>Test Ticket Sales</h2>
+    <form action="/create_session" method="post">
+        <button type="submit">Create New Session</button>
+    </form>
+    <form action="/hold_tickets" method="post">
+        <input type="number" name="num_tickets" placeholder="Number of Tickets" required>
+        <button type="submit">Hold Tickets</button>
+    </form>
+    <form action="/purchase_tickets" method="post">
+        <input type="text" name="hold_id" placeholder="Hold ID" required>
+        <button type="submit">Purchase Tickets</button>
+    </form>
+{% endblock %}
